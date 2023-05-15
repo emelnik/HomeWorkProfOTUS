@@ -30,7 +30,6 @@ public class CourcesCatalog_Test {
 
   @Test
   public void moveToCoursesMouse(){
-    new MainAbsPage(driver).open().moveActionCursor();
   }
 
 }

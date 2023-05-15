@@ -127,7 +127,7 @@ public class MainAbsPage extends AbsBaseAbsPage<MainAbsPage> {
       cartCoursesElement.click();
 
       String titlePageCourses = driver
-          .findElement(By.cssSelector(".course-header2__title"))
+          .findElement(By.cssSelector(".course-header2__info-text > .course-header2__title"))
           .getText();
 
       Assertions.assertTrue(titlePageCourses.contains(titleCourses));
@@ -174,7 +174,9 @@ public class MainAbsPage extends AbsBaseAbsPage<MainAbsPage> {
 
       cartCoursesElement.click();
 
-      String titlePageCourses = driver.getTitle();
+      String titlePageCourses = driver
+          .findElement(By.cssSelector("h1"))
+          .getText();
 
       Assertions.assertTrue(titlePageCourses.contains(titleCourses));
 
